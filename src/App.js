@@ -1,24 +1,38 @@
+// React import:
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route} from "react-router-dom";
+
+// Style import:
+import './global.style.css'
+
+// context import: 
+
+// Components: 
+import NavigationComponent from './component/global/navigation/navigation.component';
+import FooterComponent from './component/global/footer/footer.component';
+import MainForsideComponent from './component/local/frontpage/mainForside.component';
+import ProducterComponent from './component/local/produkter/producter.component';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Router>
+
+      <header>
+        <Route path="/" component={NavigationComponent} />
       </header>
+
+      <main>
+      <Route exact path="/" component={MainForsideComponent} />
+      <Route exact path="/produkter" component={ProducterComponent} />
+      </main>
+
+      <footer>
+        <Route path='/' component={FooterComponent} />
+      </footer>
+
+    </Router>
     </div>
   );
 }

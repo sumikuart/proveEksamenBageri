@@ -1,0 +1,83 @@
+.forsideNyhedsBrevStyle {
+    width:100%;
+    max-height:450px;
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+.forsideNyhedsBrevStyle img {
+    display: block;
+
+
+    width:100%;
+    margin-top:-150px;
+}
+
+
+.forsideNyhedsBrevStyle .forsideNyhedsBrevContent {
+    width:40%;
+
+    position: absolute;
+    top:0;
+    left:50%;
+
+    transform: translateX(-50%);
+
+}
+
+.forsideNyhedsBrevStyle .forsideNyhedsBrevContent .forsideNyhedTekst {
+    margin-top:100px;
+    color:white;
+   
+}
+
+
+.forsideNyhedsBrevStyle .forsideNyhedsBrevContent .forsideNyhedTekst .mainNyhedsOverskrift {
+    font-family: "Lobster 1.4";
+    font-size: 52px;
+}
+
+.forsideNyhedsBrevStyle .forsideNyhedsBrevContent .forsideNyhedTekst .underMainNyhedsOverskrift {
+    font-family: 'open-sans', light;
+}
+
+.forsideNyhedsBrevStyle .forsideNyhedsBrevContent .forsideNyhedForm{
+    display: flex;
+    margin-top:20px;
+}
+
+.forsideNyhedsBrevStyle .forsideNyhedsBrevContent .nyhedslogo{
+    width:5%;
+    height:50px;
+    background-color: #bbc8d4;
+}
+
+.forsideNyhedsBrevStyle .forsideNyhedsBrevContent form  {
+    display:block;
+    width:75%;
+}
+
+.forsideNyhedsBrevStyle .forsideNyhedsBrevContent .inputForMailNyhed{
+    width:100%;
+    border: none;
+    padding:15px;
+    height:50px;
+    
+}
+
+.forsideNyhedsBrevStyle .forsideNyhedsBrevContent .tilmeldKnap{
+    width: 20%;
+    height:50px;
+    background-color: #617685;
+
+    cursor: pointer;
+
+    text-align: center;
+}
+
+.forsideNyhedsBrevStyle .forsideNyhedsBrevContent .tilmeldKnap p {
+    color:white;
+    padding:15px;
+}

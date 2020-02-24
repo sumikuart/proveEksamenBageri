@@ -1,0 +1,28 @@
+.aboutStyle {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.aboutStyle .overskrift {
+    font-family: "Lobster 1.4";
+    text-align: center;
+    font-size: 36px;
+    margin-top:100px;
+}
+
+.aboutStyle .underOverSkrift {
+    width:90%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 13px;
+    margin-top:50px;
+    
+}
+
+.aboutStyle .forsideNyhedsDiv {
+    width:100%;
+    min-height:10px;
+    background-color: black;
+
+    margin:150px 0;
+}

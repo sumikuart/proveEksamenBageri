@@ -1,0 +1,122 @@
+.forsideSliderStyle {
+    width:100%;
+    position: relative;
+    top:0;
+    left:0;
+}
+
+
+.forsideSliderStyle img{
+    width:100%;
+    display: block;
+}
+
+
+.forsideSliderStyle .slideLeft {
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+}
+
+.forsideSliderStyle .slideLeft img {
+    transform: rotate(180deg);
+} 
+
+.forsideSliderStyle .slideRight {
+    position: absolute;
+    top:50%;
+    right:0;
+    transform: translateY(-50%);
+}
+
+
+.forsideSliderStyle .slideLeft, 
+.forsideSliderStyle .slideRight {
+    opacity: 30%;
+    transition: 0.5s;
+}
+
+.forsideSliderStyle .slideLeft:hover, 
+.forsideSliderStyle .slideRight:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+
+.forsideSliderStyle .imgShowDiv {
+    width:100%;
+    overflow: hidden;
+
+}
+
+.forsideSliderStyle .imgShowDiv .imgHolderDiv {
+    display: flex;
+    transition: 1s;
+    width:300%;
+
+}
+
+.forsideSliderStyle .imgShowDiv .imgHolderDiv.pos1 {
+    position: relative;
+    top:0;
+    left:0%;
+}
+
+.forsideSliderStyle .imgShowDiv .imgHolderDiv.pos2 {
+    position: relative;
+    top:0;
+    left:-100%;
+}
+
+.forsideSliderStyle .imgShowDiv .imgHolderDiv.pos3 {
+    position: relative;
+    top:0;
+    left:-200%;
+}
+
+
+.forsideSliderStyle .dotContainer {
+    width:8%;
+
+
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom:30px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.forsideSliderStyle .dotContainer .dot1,
+.forsideSliderStyle .dotContainer .dot2,
+.forsideSliderStyle .dotContainer .dot3 {
+    width:25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.forsideSliderStyle .dotContainer .dot1.pos1 ,
+.forsideSliderStyle .dotContainer .dot2.pos2 ,
+.forsideSliderStyle .dotContainer .dot3.pos3  {
+    width:25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: rgb(104, 104, 104);
+
+}
+
+.forsideSliderStyle .sliderText {
+    position: absolute;
+    top:50%;
+    left:50%;
+
+    transform: translate(-50%, -50%);
+
+    font-family: "Lobster 1.4";
+    font-size: 72px;
+    color:white;
+}

@@ -1,0 +1,81 @@
+.navStyle {
+    width: 100%;
+    min-height: 171px;
+    z-index: 100;
+
+    position: relative;
+}
+
+.navStyle.NavigationBackdropOn {
+    background-image: url("../../../assets/global/navigationBackdrop.jpg");
+}
+
+
+.navStyle ul {
+    width: 40%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+
+.navStyle ul li{
+    list-style: none;
+    margin-top:30px;
+
+}
+
+.navStyle ul li a{
+    color:white;
+    text-decoration: none;
+    border-bottom: 5px solid none;
+    transition: 0.5s;
+
+}
+
+.navStyle ul li a.normalNav {
+    font-family: "Open Sans", REGULAR;
+}
+
+
+.navStyle ul li a.logoNav {
+    font-family: "Lobster 1.4";
+    font-size: 60px;
+    
+}
+
+.navStyle ul li a:hover{
+    border-bottom: 5px solid white;
+}
+
+.navStyle .searchBarDiv {
+    width:20%;
+    margin: 0 auto;
+    margin-top:10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navStyle .searchBarDiv form {
+    width:70%;
+
+}
+.navStyle .searchBarDiv  form input {
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 25px;
+    width:100%;
+}
+
+
+.navStyle .searchBarDiv .searchButton {
+width:20%;
+color:white;
+cursor: pointer;
+font-family: "Open Sans", REGULAR;
+}
