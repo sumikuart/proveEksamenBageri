@@ -22,7 +22,35 @@
 .aboutStyle .forsideNyhedsDiv {
     width:100%;
     min-height:10px;
-    background-color: black;
+
 
     margin:150px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.aboutStyle .forsideNyhedsDiv .newsItemHolder {
+    width:30%;
+}
+
+.aboutStyle .forsideNyhedsDiv .newsItemHolder img {
+    border-radius: 100%;
+    display: block;
+    width:100%;
+}
+
+.aboutStyle .forsideNyhedsDiv .newsItemHolder .newsItemHolderTitle {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    margin-top:25px;
+    height: 100px;
+}
+
+.aboutStyle .forsideNyhedsDiv .newsItemHolder .newsItemHolderBeskrivelse {
+    text-align: center;
+    overflow: hidden;
+    height: 50px;
+    color: #898989;
 }

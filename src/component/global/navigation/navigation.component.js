@@ -32,8 +32,6 @@ const NavigationComponent = () => {
      })
      
 
-     console.log(currentNavUrl)
-     console.log(backgroundStyleType)
 
 
     return(

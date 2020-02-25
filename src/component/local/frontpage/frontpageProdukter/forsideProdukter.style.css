@@ -22,8 +22,53 @@
 
 .forsideProdukterStyle .forsideProduktHolder {
     width:100%;
-    height:50px;
-    background-color: black;
-
     margin-bottom:150px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.forsideProdukterStyle .forsideProduktHolder .produktItemHolder {
+    width: 20%;
+    margin:10px;
+
+}
+
+.forsideProdukterStyle .forsideProduktHolder .produktItemHolder .nameItemHolder {
+    height: 80px;
+    text-align: center;
+    overflow: hidden;
+ 
+    }
+
+.forsideProdukterStyle .forsideProduktHolder .produktItemHolder img{
+    display: block;
+    width:100%;
+    height: 95px;
+
+}
+
+.forsideProdukterStyle .forsideProduktHolder .produktItemHolder .teaserItemHolder {
+    height: 75px;
+    overflow: hidden;
+}
+
+
+.forsideProdukterStyle .forsideProduktHolder .produktItemHolder .moreInfoItemButton {
+    text-align: center;
+    border: 2px solid #a8a8a8;
+    align-items: baseline;
+    margin-top:15px;
+
+    padding: 10px 0;
+
+    cursor: pointer;
+}
+
+
+.forsideProdukterStyle .forsideProduktHolder .produktItemHolder .moreInfoItemButton a {
+ text-decoration: none;
+ display: block;
 }
