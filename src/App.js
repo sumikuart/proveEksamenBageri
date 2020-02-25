@@ -12,7 +12,7 @@ import NavigationComponent from './component/global/navigation/navigation.compon
 import FooterComponent from './component/global/footer/footer.component';
 import MainForsideComponent from './component/local/frontpage/mainForside.component';
 import ProducterComponent from './component/local/produkter/producter.component';
-
+import ProduktDetaljeComponent from './component/local/produktDetaljevisning/produktDetaljer.component';
 
 // Context's
 
@@ -31,7 +31,9 @@ function App() {
 
         <main>
         <Route exact path="/" component={MainForsideComponent} />
-        <Route exact path="/produkter" component={ProducterComponent} />
+        <Route path="/produkter/:id" component={ProducterComponent} />
+
+        <Route path="/produkt/:id" component={ProduktDetaljeComponent} />
         </main>
 
         <footer>

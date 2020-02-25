@@ -1,6 +1,6 @@
 // Main:
 import React, { useContext, useEffect } from 'react';
-import { NavLink, BrowserRouter as Router, Route} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 
 import './mainForside.style.css'
@@ -11,7 +11,7 @@ import ForsideSliderComponent from './frontpageSlideComponents/forsideSlider.com
 import AboutFrontPageComponent from './frontpageAboutComponent/frontpageAbout.component';
 import NyhedsbrevForsideComponent from './frontpageNyhedsbrev/forsideNyhedsbrev.component';
 import ProdukterForsideComponent from './frontpageProdukter/forsideProdukter.component';
-import ProduktContextProvider from '../../../context/produkter.context';
+
 
 
 
@@ -22,14 +22,14 @@ const MainForsideComponent = () => {
     return (
         <div className='mainForsideStyle'>
 
-            <Router>
 
-                    <Route exact path="/" component={ForsideSliderComponent} />
-                    <Route exact path="/" component={AboutFrontPageComponent} />
-                    <Route exact path="/" component={NyhedsbrevForsideComponent} />
-                    <Route exact path="/" component={ProdukterForsideComponent} />
+                    <ForsideSliderComponent />
+                    <AboutFrontPageComponent />
+                    <NyhedsbrevForsideComponent/>
+                    <ProdukterForsideComponent />
+
                     
-            </Router>
+           
 
         </div>
     )

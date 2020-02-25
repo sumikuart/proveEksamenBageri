@@ -1,3 +1,106 @@
 .produkterStyle {
+    width: 40%;
+    margin: 0 auto;
+    min-height: 60vh;
+}
 
+.produkterStyle .produktIntroText {
+    text-align: center;
+    margin-top:100px;
+}
+
+
+.produkterStyle .produktIntroText .topProduktIntro {
+    font-family: "Lobster 1.4";
+    font-size: 60px;
+}
+
+
+.produkterStyle .produktIntroText .lowProduktIntro  {
+    margin-top:20px;
+    color: #898989;
+}
+
+.produkterStyle  .produktContentStyle {
+    width:100%;
+
+    margin-top:50px;
+    display: flex;
+}
+
+.produkterStyle  .produktContentStyle .produktKategoriTræ {
+    width:30%
+}
+
+.produkterStyle  .produktContentStyle .produktKategoriTræ ul {}
+.produkterStyle  .produktContentStyle .produktKategoriTræ ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.produkterStyle  .produktContentStyle .produktKategoriTræ ul li a{
+    text-decoration: none;
+    color:#898989
+}
+
+.produkterStyle  .produktContentStyle .produktKategoriTræ ul li a.active {
+    font-weight: bolder;
+    color:black
+}
+
+.produkterStyle  .produktContentStyle .produktItemShower{
+    width:70%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.produkterStyle  .produktContentStyle .produktItemShower .soteretProduktItemHolder {
+    width:30%;
+    text-align: center;
+}
+
+.produkterStyle  .produktContentStyle .produktItemShower .soteretProduktItemHolder img {
+    display: block;
+    width:100%;
+    height:100px;
+}
+
+
+.produkterStyle  .produktContentStyle .produktItemShower .soteretProduktItemHolder .soteretProduktOverskrift {
+    font-weight: bolder;
+    margin: 20px 0;
+    height:50px;
+    overflow: hidden;
+}
+
+.produkterStyle  .produktContentStyle .produktItemShower .soteretProduktItemHolder .soteretProduktBeskrivelse {
+    overflow: hidden;
+    color: #898989;
+    height:90px;
+}
+
+.produkterStyle  .produktContentStyle .produktItemShower .soteretProduktItemHolder .soteretProdukKnap {
+    text-align: center;
+    border: 2px solid #a8a8a8;
+    align-items: baseline;
+    margin:15px 0;
+    margin-bottom:35px;
+    padding: 10px 0;
+
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: white;
+
+}
+
+.produkterStyle  .produktContentStyle .produktItemShower .soteretProduktItemHolder .soteretProdukKnap:hover{
+    background-color: #a8a8a8;
+}
+
+.produkterStyle  .produktContentStyle .produktItemShower .soteretProduktItemHolder .soteretProdukKnap a {
+    text-decoration: none;
+    display: block;
 }

@@ -40,7 +40,7 @@ const NavigationComponent = () => {
             <nav>
                 <ul>
                     <li><NavLink to='/' className='normalNav'>FORSIDE</NavLink></li>
-                    <li><NavLink to='/produkter' className='normalNav'>PRODUKTER</NavLink></li>
+                    <li><NavLink to='/produkter/5' className='normalNav'>PRODUKTER</NavLink></li>
 
                     <li><NavLink to='/' className='logoNav'>bageriet</NavLink></li>
                     

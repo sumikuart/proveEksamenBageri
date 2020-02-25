@@ -65,10 +65,17 @@
     padding: 10px 0;
 
     cursor: pointer;
+    transition: 0.5s;
+    background-color: white;
 }
 
+.forsideProdukterStyle .forsideProduktHolder .produktItemHolder .moreInfoItemButton:hover {
+
+    background-color: #a8a8a8;
+}
 
 .forsideProdukterStyle .forsideProduktHolder .produktItemHolder .moreInfoItemButton a {
  text-decoration: none;
  display: block;
+ color:black
 }

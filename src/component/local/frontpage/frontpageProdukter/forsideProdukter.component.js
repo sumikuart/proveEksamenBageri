@@ -28,7 +28,7 @@ const ProduktPoster = (props) => {
                 </div>
 
                 <div className='moreInfoItemButton'>
-                    <NavLink to='/'>Se Mere</NavLink>
+                <NavLink to={'/produkt/' + props.currentProdukt[1].id} > se mere </NavLink>
                 </div>
 
             </div>
@@ -40,6 +40,7 @@ const ProduktPoster = (props) => {
 const ProdukterForsideComponent = (props) => {
 
 const [produkter, setProdukter] = useState('')
+
 
 const [loadingProdukt, setLoadingProdukt] = useState('loading')
 
