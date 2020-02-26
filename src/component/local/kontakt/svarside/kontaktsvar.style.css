@@ -1,0 +1,94 @@
+.kontaktSvarStyle{
+    width:40%;
+    margin: 0 auto;
+    min-height: 60vh;
+}
+
+.kontaktSvarStyle .navigationTreeKontakt {
+    border: 2px solid #898989;
+    display: flex;
+    margin-top:30px;
+
+    padding: 15px 30px;
+}
+
+.kontaktSvarStyle .navigationTreeKontakt a {
+    text-decoration: none;
+
+}
+
+
+.kontaktSvarStyle .navigationTreeKontakt a {
+    color:#898989
+}
+
+.kontaktSvarStyle .navigationTreeKontakt p {
+    padding: 0 20px;
+    color:black;
+    font-weight: bold;
+}
+
+.kontaktSvarStyle .kontaktSvareHeadline {
+    text-align: center;
+    font-size: 48px;
+    font-family: "Lobster 1.4";
+    margin-top:100px;
+    margin-bottom:70px;
+}
+
+
+.kontaktSvarStyle .underKontaktSvareHeadline {
+    text-align: center;
+    color: #898989;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.kontaktSvarStyle .kontaktSvarContent {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 150px;
+}
+
+.kontaktSvarStyle .kontaktSvarTekst {
+    width:60%;
+} 
+
+.kontaktSvarStyle .kontaktSvarTekst .svarTekstIntro {
+    font-weight: bolder;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+
+.kontaktSvarStyle .kontaktSvarTekst .kontaktSvarKategori {
+    font-weight: bolder;
+    font-size: 24px;
+
+}
+
+.kontaktSvarStyle .kontaktSvarTekst .kontaktSvarData {
+    font-size: 24px;
+    color: #898989;
+    margin-bottom: 15px;
+}
+
+
+
+.kontaktSvarStyle .kontaktSvarTekst .kontaktSvarDataNote {
+    font-size: 24px;
+    color: #898989;
+    line-height: 2;
+}
+
+
+
+.kontaktSvarStyle .kontaktSvarBillede{
+    width:40%;
+}
+
+.kontaktSvarStyle .kontaktSvarBillede img {
+    display: block;
+    width: 100%;
+    border-radius: 100%;
+}

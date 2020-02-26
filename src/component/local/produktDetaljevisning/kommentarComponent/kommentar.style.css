@@ -1,0 +1,61 @@
+.kommentarStyle {
+    width:100%;
+}
+
+.kommentarStyle .kommentarStart {
+    background-color: white;
+    width:100%;
+    border: 2px solid #889988;
+    margin-bottom: 10px;
+}
+
+.kommentarStyle .kommentarStart p {
+    padding: 15px 0;
+    padding-left: 50px;
+    font-weight: bold;
+}
+
+.kommentarStyle .kommentarInput{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.kommentarStyle .kommentarInput .kommentarFlexer {
+    width:80%;
+    display: flex;
+    border: 2px solid #889988;
+    align-items: center;
+}
+
+.kommentarStyle .kommentarInput .kommentarFlexer .kommentarIconDiv {
+    width:8%;
+}
+
+
+.kommentarStyle .kommentarInput .kommentarFlexer form {
+    display: block;
+    width:90%;
+    
+}
+
+.kommentarStyle .kommentarInput .kommentarFlexer form input {
+width:100%;
+padding: 15px 0;
+font-size: 16px;
+border:none;
+}
+
+.kommentarStyle .kommentarInput  .tilføjKommentarKnap {
+    color:white;
+    background-color: #617685;
+    width:20%;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.kommentarStyle .kommentarInput  .tilføjKommentarKnap p {
+    padding-top:15px;
+}

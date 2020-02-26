@@ -1,6 +1,6 @@
 
 // Main:
-import React, { useContext } from 'react';
+import React, { useContext,useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 
@@ -10,6 +10,35 @@ import './forsideNyhedsbrev.style.css'
 import nyhedsbrevForsideBaggrund from '../../../../assets/forside/nyhedsbrev/newsletterbg.jpg'
 
 const NyhedsbrevForsideComponent = () => {
+
+    const [nyhedsBrevsEmail,setNyhedsBrevsEmail] = useState('')
+    const [nyhedsBrevsresponsBesked,setNyhedsBrevsresponsBesked] = useState('')
+
+    const handleNyhedsbrevsEmail = (e) => {
+        setNyhedsBrevsEmail(e.target.value)
+    }
+
+    const validateEmail = (e) => {
+        setNyhedsBrevsresponsBesked('checker')
+        
+        if(!nyhedsBrevsEmail.includes('@')  || !nyhedsBrevsEmail.includes('.')){   
+            setNyhedsBrevsresponsBesked('Skriv venneligst en godkendt Email')
+        }  
+
+        if(nyhedsBrevsEmail == '') {
+            setNyhedsBrevsresponsBesked('Vær vennelig at udfylde din Email')
+        }
+    }
+
+    const tilmeldNyhedsbrev = () => {
+        {validateEmail()}
+
+        if(nyhedsBrevsresponsBesked == 'checker') {
+
+            setNyhedsBrevsresponsBesked('tak for tilmeldningen')
+
+        }
+    }
 
     return (
         <div className='forsideNyhedsBrevStyle'>
@@ -28,15 +57,18 @@ const NyhedsbrevForsideComponent = () => {
                    <div className='nyhedslogo'></div>
 
                    <form>
-                       <input type="text" placeholder='indtast din email....' className='inputForMailNyhed'/>
+                       <input type="text" placeholder='indtast din email....' className='inputForMailNyhed' value={nyhedsBrevsEmail} onChange={handleNyhedsbrevsEmail} onBlur={validateEmail}/>
                    </form>
 
-
-                   <div className='tilmeldKnap'>
+                   <div className='tilmeldKnap' onClick={tilmeldNyhedsbrev}>
                        <p>Tilmeld</p>
                    </div>
 
                </div>
+
+               
+               <p className='responsBesked'>{nyhedsBrevsresponsBesked}</p>
+
 
            </div>
 

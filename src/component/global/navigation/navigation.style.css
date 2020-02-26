@@ -27,11 +27,13 @@
 
 }
 
-.navStyle ul li a{
+.navStyle ul li a,
+.navStyle ul li p{
     color:white;
     text-decoration: none;
     border-bottom: 5px solid none;
     transition: 0.5s;
+    cursor: pointer;
 
 }
 
@@ -45,6 +47,7 @@
     font-size: 60px;
     
 }
+
 
 .navStyle ul li a:hover{
     border-bottom: 5px solid white;
@@ -78,4 +81,41 @@ width:20%;
 color:white;
 cursor: pointer;
 font-family: "Open Sans", REGULAR;
+}
+
+
+.navStyle  .loginMasterLi {
+    position: relative;
+}
+
+.navStyle .loginBox {
+    transition: 0.5s;
+    position: absolute;
+    left:0;
+    top:-150px;
+}
+
+
+.navStyle .loginBox.show{
+    display: block;
+    position: absolute;
+    left:0;
+    top:30px;
+}
+
+.navStyle .loginBox form input{
+    padding:5px;
+    width:250px;
+}
+
+.navStyle .loginBox .loginKnapMaster {
+    display: flex;
+}
+
+.navStyle .loginBox .loginKnapMaster p{
+    margin: 0 10px;
+}
+
+.navStyle .loginBox .loginKnapMaster a:hover {
+border: none;
 }

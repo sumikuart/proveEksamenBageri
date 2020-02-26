@@ -12,7 +12,7 @@
     margin:30px 0;
 
     display: flex;
-    
+    margin-top: 50px;
 }
 
 
@@ -23,4 +23,116 @@
 }
 .produktDetaljeStyle .navigationTree p {
     margin:10px;
+}
+
+/* overskrift indhold */
+
+.produktDetaljeStyle .detaljeTop{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.produktDetaljeStyle .detaljeTop .detaljeoverskrift {
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 32px;
+
+    width:60%;
+
+}
+
+.produktDetaljeStyle .detaljeTop .detaljeLike{
+    display: flex;
+    cursor: pointer;
+    border: 1px solid #898989;
+    padding:0px 60px;
+    font-size: 16px;
+    height:50px;
+
+    font-family: "Open Sans";
+    align-items: center;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.produktDetaljeStyle .detaljeTop .detaljeLike:hover {
+    background-color: #898989;
+}
+
+
+.produktDetaljeStyle .detaljeTop .detaljeLike .hjerteSymbolBase,
+.produktDetaljeStyle .detaljeTop .detaljeLike .hjerteSymbolFull {
+    color:red;
+    font-size: 20px;
+    margin-left:5px;
+    width:20px
+}
+
+.produktDetaljeStyle .detaljeTop .detaljeLike .hjerteSymbolFull.liked,
+.produktDetaljeStyle .detaljeTop .detaljeLike .hjerteSymbolBase.normal {
+    display: block;
+}
+
+.produktDetaljeStyle .detaljeTop .detaljeLike .hjerteSymbolFull.normal,
+.produktDetaljeStyle .detaljeTop .detaljeLike .hjerteSymbolBase.liked {
+    display: none;
+}
+
+/* Hoved indholdet: */
+
+.produktDetaljeStyle .mainDetajleContent {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    margin:30px 0px;
+    margin-bottom: 50px;
+}
+
+/* beskrivelse */
+.produktDetaljeStyle .mainDetajleContent .detaljeBeskrivelse{
+    width: 60%;
+    line-height: 2;
+    font-size: 18px;
+    color:#898989
+}
+
+.produktDetaljeStyle .mainDetajleContent .detaljeBeskrivelse img{
+    width:30%;
+    float: left;
+    display:block;
+    margin-right:30px;
+}
+/* indgradienser */
+.produktDetaljeStyle .mainDetajleContent .detaljeIndgradienser{
+    width: 35%;
+}
+
+.produktDetaljeStyle .mainDetajleContent .detaljeIndgradienser .indgradienserOverskrift{
+    text-align: left;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.produktDetaljeStyle .mainDetajleContent .detaljeIndgradienser .indgradiensHolder .indgradiensItem {
+    background-color: white;
+    height:50px;
+    width:100%;
+    margin-bottom: 10px;
+
+   text-align: center;
+
+}
+
+
+
+.produktDetaljeStyle .mainDetajleContent .detaljeIndgradienser .indgradiensHolder .indgradiensItem p {
+    padding-top:10px;
+    color:#898989;
+    font-size: 18px;
+
+    padding-right:10px;
+    
 }
