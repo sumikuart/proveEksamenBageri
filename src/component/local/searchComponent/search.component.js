@@ -56,8 +56,7 @@ const SearchComponent = (props) => {
 
         return (
             <div className='searchStyle'>
-                <p>Hej Fra Search</p>
-                <p>{'du har søgt på: ' +selectedSearchWord}</p>
+                <h2>{'du har søgt på: ' +selectedSearchWord}</h2>
 
 
 
