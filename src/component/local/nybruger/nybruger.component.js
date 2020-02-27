@@ -2,7 +2,7 @@
 // Main:
 import React, { useContext, useState } from 'react';
 import { NavLink } from "react-router-dom";
-
+import axios from 'axios'
 
 import './nybruger.style.css'
 
@@ -83,6 +83,17 @@ const NybrugerComponent = () => {
         {validateNyBrugerGentagetPassword()}
 
         if(errorNyBrugerNavn =='' && errorNyBrugerEmail == '' && errorNyBrugerPassword == '' && errorNyBrugerGentagetPassword == '') {
+
+
+            const user = {
+                navn:nyBrugerNavn,
+                email: nyBrugerEmail,
+                password:nyBrugerPassword,
+            }
+        
+            axios.post('http://localhost:4464/add/newUser', user)
+            .then(res => console.log(res.data))
+
 
             setOprettelsesBesked('Velkommen til ' +  nyBrugerNavn + ' Du er nu oprettet')
 

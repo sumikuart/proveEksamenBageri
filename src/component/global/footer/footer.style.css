@@ -1,6 +1,7 @@
 .footerStyle {
     width: 100%;
     position: relative;
+
 }
 
 .footerStyle .topButton {
@@ -34,6 +35,7 @@
     background-color: #333333;
     color: #848484;
     text-align: center;
+    min-height: 200px;
 
 }
 

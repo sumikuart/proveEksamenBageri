@@ -52,6 +52,12 @@
     width:5%;
     height:50px;
     background-color: #bbc8d4;
+    text-align: center;
+}
+
+.forsideNyhedsBrevStyle .forsideNyhedsBrevContent .nyhedslogo p {
+    font-size: 34px;
+    color:white;    
 }
 
 .forsideNyhedsBrevStyle .forsideNyhedsBrevContent form  {

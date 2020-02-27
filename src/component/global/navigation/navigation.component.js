@@ -2,6 +2,8 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { NavLink, useHistory } from "react-router-dom";
 
+import axios from 'axios'
+
 // CSS:
 import './navigation.style.css'
 
@@ -19,22 +21,50 @@ const NavigationComponent = () => {
 
     const [searchValue, setSearchValue] = useState('')
 
+    // login data:
+    const [userList, setUserList] = useState('')
+    const [userLoginName, setUserLoginName] = useState('')
+    const [userLoginWord, setUserLoginWord] = useState('')
+
+    // userContainer
+
+    const [onlineUser, setOnlineUser] = useState ('')
+
     useEffect(()=>{ 
         setCurrentNavUrl(history.location.pathname)
-     },[])
 
-     
+        axios.get('http://localhost:4464/get/user')
+        .then(response =>{
+            setUserList(response.data)
+        }).catch(function(error) {
+            console.log('an Error has accurd in get from componentDidMount in todoList component')
+        })
+        
+        setOnlineUser(localStorage.getItem('logedUserName'))
+    },[])
+
+    
     useEffect(()=>{ 
 
         setCurrentNavUrl(history.location.pathname)
 
-          if (currentNavUrl === '/') {
+        if (currentNavUrl === '/') {
             setBackgroundStyleType('NavigationBackdropOff')
         } else {
             setBackgroundStyleType('NavigationBackdropOn')
         }
      })
+
+
+     const handleLoginName = (e) => {
+        setUserLoginName(e.target.value)
+     }
      
+     const handleLoginWord = (e) => {
+        setUserLoginWord(e.target.value)
+     }
+     
+
      const openLoginBox = (e) => {
          if(loginBoxStatus == 'hide') {
             setLoginBoxStatus('show')
@@ -56,6 +86,78 @@ const NavigationComponent = () => {
         }
      }
 
+    const loginFunction = (e) =>{
+
+        console.log(userList[0].navn)        
+        console.log(userLoginName)
+        console.log(userLoginWord)
+
+        for (var i = 0; i < userList.length; i++) {
+
+            if(userList[i].navn == userLoginName){
+                if (userLoginWord == userList[i].password) {
+
+                    console.log('du er logget ind')
+
+                    localStorage.setItem('logedUserName', userLoginName);
+                    setOnlineUser(userLoginName)
+
+                    setUserLoginName('')
+                    setUserLoginWord('')
+
+                    
+                }
+            }
+        }
+
+        
+    }  
+
+    const handleLogout = () => {
+        localStorage.setItem('logedUserName', '');
+        setOnlineUser('')
+    }
+
+    const loginPart = () => {
+
+        if (onlineUser == '') {
+
+            return (
+
+                <div>
+                    <p className='normalNav' onClick={openLoginBox}>LOGIN</p>
+    
+    
+                    <div className={'loginBox ' + loginBoxStatus}>
+                        <form>
+                            <input type="text" placeholder='navn....' value={userLoginName} onChange={handleLoginName} />
+                            <input type="password" placeholder='kodeord...' value={userLoginWord} onChange={handleLoginWord} />
+                        </form>
+    
+                        <div className='loginKnapMaster'>
+                            <div onClick={loginFunction}><p>login</p></div>
+    
+                            <p>/</p>
+    
+                            <div><NavLink to='/nybruger'>Nybruger</NavLink></div>
+    
+                        </div>
+                    </div>
+                </div>
+            )
+
+        } else {
+            return(
+                  <div>
+                    <p className='normalNav' onClick={handleLogout}>{'LOGOUT - ' + onlineUser}</p>
+                    </div>
+            )
+
+        }
+
+    }
+
+
     return(
         <div className={'navStyle ' + backgroundStyleType}>
 
@@ -68,24 +170,9 @@ const NavigationComponent = () => {
                     
                     <li><NavLink to='/kontakt' className='normalNav'>KONTAKT</NavLink></li>
 
-                    <li className='loginMasterLi'><p className='normalNav' onClick={openLoginBox}>LOGIN</p>
+                    <li className='loginMasterLi'>
 
-                            <div className={'loginBox '+loginBoxStatus}>
-                                <form>
-                                    <input type="text" placeholder='navn....'/>
-                                    <input type="password" placeholder='kodeord...'/>
-                                </form>
-
-                                <div className='loginKnapMaster'>
-                                    <div><p>login</p></div>
-
-                                    <p>/</p>
-
-                                    <div><NavLink to='/nybruger'>Nybruger</NavLink></div>
-                               
-                                </div>
-
-                            </div>
+                    {loginPart()}
 
                     </li>
                 </ul>
@@ -93,7 +180,7 @@ const NavigationComponent = () => {
 
             <div className='searchBarDiv'>
                 
-                <form>
+                <form onSubmit={startSearchFunction}>
                     <input type="text" placeholder='Søg' value={searchValue} onChange={searchWordOnChange}/>
                 </form>
 

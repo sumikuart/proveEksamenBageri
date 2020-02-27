@@ -2,7 +2,7 @@
 // Main:
 import React, { useContext,useState } from 'react';
 import { NavLink } from "react-router-dom";
-
+import axios from 'axios'
 
 import './forsideNyhedsbrev.style.css'
 
@@ -35,7 +35,13 @@ const NyhedsbrevForsideComponent = () => {
 
         if(nyhedsBrevsresponsBesked == 'checker') {
 
+            const mail = {email:nyhedsBrevsEmail}
+
+            axios.post('http://localhost:4464/add/newsEmail', mail)
+            .then(res => console.log(res.data))
+
             setNyhedsBrevsresponsBesked('tak for tilmeldningen')
+            setNyhedsBrevsEmail('')
 
         }
     }
@@ -54,7 +60,9 @@ const NyhedsbrevForsideComponent = () => {
 
                <div className='forsideNyhedForm'>
 
-                   <div className='nyhedslogo'></div>
+                   <div className='nyhedslogo'>
+                       <p>&#x2709;</p>
+                   </div>
 
                    <form>
                        <input type="text" placeholder='indtast din email....' className='inputForMailNyhed' value={nyhedsBrevsEmail} onChange={handleNyhedsbrevsEmail} onBlur={validateEmail}/>

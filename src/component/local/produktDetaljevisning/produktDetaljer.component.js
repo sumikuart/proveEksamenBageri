@@ -24,8 +24,6 @@ const ProduktDetaljeComponent = (props) => {
     const [produktDetaljer, setProduktDetaljer] = useState('')
     const [produktIndgradienser, setProduktIndgradienser] = useState('')
 
-
-
     const [likedStatus, setLikedStatus] = useState('normal')
 
     useEffect(() => {
@@ -49,11 +47,14 @@ const ProduktDetaljeComponent = (props) => {
 
     // Functions:
     const likeCurrentItem = () => {
+
         if (likedStatus == 'normal') {
             setLikedStatus('liked')
         } else {
             setLikedStatus('normal')
         }
+
+        
     }
 
     // Mapper: 

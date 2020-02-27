@@ -25,15 +25,13 @@ const SearchComponent = (props) => {
 
     useEffect(()=>{ 
 
-        axios.get('https://heka4.apache.techcollege.dk/api/products/')
-        .then(response => {
-            setSearchProduktData(response.data)
-        })
+        fetch('https://heka4.apache.techcollege.dk/api/products/')
+                .then(response => response.json())
+                .then((data) => {setSearchData(data)})
+
 
         setSelectedSearchWord(props.match.params.word)
 
-        setSearchData([])
-    
         setSearchLoader('done')
     },[])
 
@@ -54,9 +52,6 @@ const SearchComponent = (props) => {
     } else {
 
 
-console.log(Object.entries(searchProduktData))
-
-
 
 
         return (
@@ -69,15 +64,32 @@ console.log(Object.entries(searchProduktData))
                 <div>
                 <FilterResults
                     value={selectedSearchWord}
-                    data={Object.entries(searchProduktData)}
+                    data={searchData}
 
                     renderResults={results => (
                         <div className='searchFilterFlex'>
                             {results.map(produkter => (
 
-                                <div className='postercontainer'>
+                              
+                                <div className='searchItem'>
 
-                                <p>{produkter.title}</p>
+                                <NavLink to={'/produkt/' + produkter.id}>
+
+                                    <div className='postercontainer'>
+
+                                        <div className='textContentSearch'>  
+                                            <p>{produkter.title}</p>
+                                            <p className='descriptionInSearch'>{produkter.teaser}</p>
+                                        </div>
+                                        
+                                        <div className='imgContentSearch'>
+                                        <img src={produkter.filename_absolute} alt=""/>
+                                        </div>
+                                    </div>
+
+                                    
+                                
+                                </NavLink>
 
                                 </div>
 
